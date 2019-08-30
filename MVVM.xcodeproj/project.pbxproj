@@ -16,6 +16,7 @@
 		D84FBC2223139146003B0A92 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84FBC2023139146003B0A92 /* InformationTableViewCell.xib */; };
 		D84FBC2423139500003B0A92 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FBC2323139500003B0A92 /* ViewModel.swift */; };
 		D84FBC262313A0E0003B0A92 /* MoviesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FBC252313A0E0003B0A92 /* MoviesClient.swift */; };
+		D8F67B1D2319B767006DEBF4 /* NoticiaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F67B1C2319B767006DEBF4 /* NoticiaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D84FBC2023139146003B0A92 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
 		D84FBC2323139500003B0A92 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D84FBC252313A0E0003B0A92 /* MoviesClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesClient.swift; sourceTree = "<group>"; };
+		D8F67B1C2319B767006DEBF4 /* NoticiaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				D815232E2310738100A431D5 /* AppDelegate.swift */,
 				D81523302310738100A431D5 /* ViewController.swift */,
 				D84FBC1F23139146003B0A92 /* InformationTableViewCell.swift */,
+				D8F67B1C2319B767006DEBF4 /* NoticiaModel.swift */,
 				D84FBC2323139500003B0A92 /* ViewModel.swift */,
 				D84FBC252313A0E0003B0A92 /* MoviesClient.swift */,
 				D84FBC2023139146003B0A92 /* InformationTableViewCell.xib */,
@@ -154,6 +157,7 @@
 				D84FBC2423139500003B0A92 /* ViewModel.swift in Sources */,
 				D815232F2310738100A431D5 /* AppDelegate.swift in Sources */,
 				D84FBC262313A0E0003B0A92 /* MoviesClient.swift in Sources */,
+				D8F67B1D2319B767006DEBF4 /* NoticiaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

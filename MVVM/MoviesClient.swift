@@ -10,11 +10,13 @@ import UIKit
 
 class MoviesClient: NSObject {
     
-    func fetchMovies(completion: @escaping ([NSDictionary]?) -> Void) {
+    func fetchMovies(completion: @escaping ([NoticiaModel]?) -> Void) {
         
         let urlStr = "http://movil.aztecanoticias.com.mx/ultimas/ultnot.json"
         let urlApple = URL(string:urlStr)
         let task = URLSession.shared.dataTask(with: urlApple!) {(data, response, error) in
+           
+        var newsArray = [NoticiaModel]()
             
             if error != nil {
                 print("ERROR URL OR INTERNET CONECTION")
@@ -30,8 +32,17 @@ class MoviesClient: NSObject {
                     if let movies = rootJSONDictionary["items"] as? [NSDictionary]{
                         
                         print(movies)
-                        completion(movies)
+                        for everyNew in movies {
                         
+                            guard let titulo = everyNew["titulo"] as? String else {return}
+                            guard let fecha = everyNew["fecha"] as? String else {return}
+
+                            
+                        newsArray.append(NoticiaModel(titulo: titulo, fecha: fecha))
+                        
+                        }
+                        
+                        completion(newsArray)
                     }// end if
                     
                 }// end do

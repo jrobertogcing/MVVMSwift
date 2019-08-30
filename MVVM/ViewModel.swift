@@ -12,7 +12,10 @@ class ViewModel: NSObject {
     
     @IBOutlet var moviesClient: MoviesClient!
     
-    var movies : [NSDictionary]?
+    var movies : [NoticiaModel]?
+    
+    var arrayObject : [NoticiaModel] = []
+
     
     func fetchMovies(completion:@escaping () -> ()) {
         moviesClient.fetchMovies { movies in
@@ -27,15 +30,20 @@ class ViewModel: NSObject {
     
     func numberOfItemsInSection(section: Int) -> Int {
     
-        //return 10
         return movies?.count ?? 0
+        //return movies?.count ?? 0
     
     }
     
-    func titleForItemAtIndexPath(indexPath: IndexPath) -> String {
-        //return "Hi"
+    func titleForItemAtIndexPath(indexPath: IndexPath) -> [NoticiaModel] {
+
+        let datosCelda = movies?[indexPath.row]
+        var arr = [NoticiaModel]()
         
-        return movies?[indexPath.row].value(forKeyPath: "autor") as? String ?? ""
+        arr.append(NoticiaModel(titulo: datosCelda?.titulo ?? "", fecha: datosCelda?.fecha ?? ""))
+        print(arr[0])
+        return movies!
+        //return movies?[indexPath.row].value(forKeyPath: "autor") as? String ?? ""
     }
 
 }

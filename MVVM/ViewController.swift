@@ -57,7 +57,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func configureCell(cell:UITableViewCell, forRowAtIndexPath indexPath:IndexPath){
     
         //cell.textLabel?.text = "Hola"
-        cell.textLabel?.text = viewModel.titleForItemAtIndexPath(indexPath: indexPath)
+        //cell.textLabel?.text = viewModel.titleForItemAtIndexPath(indexPath: indexPath)
+        var arr = [NoticiaModel]()
+        arr = viewModel.titleForItemAtIndexPath(indexPath: indexPath)
+        let datosCelda = arr[indexPath.row]
+        cell.textLabel?.text = datosCelda.titulo
     }
 }
 
